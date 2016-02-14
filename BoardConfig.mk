@@ -46,10 +46,12 @@ COMMON_GLOBAL_CFLAGS += -DNEEDS_VECTORIMPL_SYMBOLS
 BOARD_KERNEL_CMDLINE := console=ttyS1,115200n8 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-TARGET_KERNEL_SOURCE := kernel/samsung/mint2g
-TARGET_KERNEL_CONFIG := cyanogenmod_mint_defconfig
-BOARD_KERNEL_IMAGE_NAME := Image
+#TARGET_KERNEL_SOURCE := kernel/samsung/mint2g
+#TARGET_KERNEL_CONFIG := cyanogenmod_mint_defconfig
+#TARGET_KERNEL_CONFIG := twrp_mint_defconfig
+#BOARD_KERNEL_IMAGE_NAME := Image
 #TARGET_KERNEL_CUSTOM_TOOLCHAIN := arm-eabi-4.4.3
+TARGET_PREBUILT_KERNEL := kernel
 TARGET_PROVIDES_INITRC := true
 
 # Partitions
@@ -63,7 +65,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Recovery
-DEVICE_RESOLUTION := 240x320
+DEVICE_RESOLUTION := 240x240
 BOARD_LDPI_RECOVERY := true
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := "<font_7x16.h>"
@@ -71,7 +73,7 @@ BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/mint2g/recovery/recover
 #TARGET_RECOVERY_INITRC := device/samsung/mint/recovery/recovery.rc
 #BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/mint/recovery/graphics.c
 BOARD_HAS_NO_MISC_PARTITION := true
-TARGET_RECOVERY_FSTAB := device/samsung/mint2g/recovery.fstab
+#TARGET_RECOVERY_FSTAB := device/samsung/mint2g/recovery.fstab
 BOARD_SUPPRESS_EMMC_WIPE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
@@ -165,3 +167,17 @@ BOARD_SEPOLICY_UNION += \
 
 # Host specific
 PRODUCT_PREBUILT_WEBVIEWCHROMIUM := yes
+
+#twrp
+DEVICE_RESOLUTION := 240x240
+RECOVERY_GRAPHICS_USE_LINELENGTH := true
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_INTERNAL_STORAGE_PATH := "/storage/extSdCard"
+TW_INTERNAL_STORAGE_MOUNT_POINT := "/storage/extSdCard"
+TW_EXTERNAL_STORAGE_PATH := "sdcard"
+TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
+TW_MAX_BRIGHTNESS := 255
+TW_INCLUDE_INJECTTWRP := true
+TWRP_EVENT_LOGGING := false

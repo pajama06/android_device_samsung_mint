@@ -44,6 +44,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/bin/poweroff_alarm:root/bin/poweroff_alarm \
     $(LOCAL_PATH)/rootdir/bin/vcharged:root/bin/vcharged \
     $(LOCAL_PATH)/rootdir/bin/rawdatad:root/bin/rawdatad \
+    
+# TWRP
+PRODUCT_COPY_FILES += \
+	device/samsung/mint2g/twrp.fstab:recovery/root/etc/twrp.fstab
 
 
 # Bluetooth
