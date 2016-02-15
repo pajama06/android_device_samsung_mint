@@ -73,7 +73,8 @@ BOARD_CUSTOM_RECOVERY_KEYMAPPING := ../../device/samsung/mint2g/recovery/recover
 #TARGET_RECOVERY_INITRC := device/samsung/mint/recovery/recovery.rc
 #BOARD_CUSTOM_GRAPHICS := ../../../device/samsung/mint/recovery/graphics.c
 BOARD_HAS_NO_MISC_PARTITION := true
-#TARGET_RECOVERY_FSTAB := device/samsung/mint2g/recovery.fstab
+TARGET_RECOVERY_FSTAB := device/samsung/mint2g/recovery.fstab
+RECOVERY_FSTAB_VERSION := 2
 BOARD_SUPPRESS_EMMC_WIPE := true
 TARGET_RECOVERY_PIXEL_FORMAT := "BGRA_8888"
 
