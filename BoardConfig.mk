@@ -179,5 +179,4 @@ TW_EXTERNAL_STORAGE_PATH := "sdcard"
 TW_EXTERNAL_STORAGE_MOUNT_POINT := "sdcard"
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
 TW_MAX_BRIGHTNESS := 255
-TW_INCLUDE_INJECTTWRP := true
 TWRP_EVENT_LOGGING := false
